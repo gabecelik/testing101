@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+	<html lang="en">
+ <head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Gabe Celik</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		
+</head>
+  	
+<body>
+		<div id="header">
+			<div class="container">
+				<nav>
+					<img src="images/logo.png" alt="logo" class="logo">
+					<ul>
+						<li><a href="#header">Home</a></li>
+						<li><a href="#about">About</a></li>
+						<li><a href="#">Portfolio</a></li>
+						<li><a href="#">Resume</a></li>
+						<li><a href="#contact">Contact</a></li>
+					</ul>
+				</nav>
+				<div class="header-text">
+					<p>Graphic Designer</p>
+					<h1><span>Gabriel Celik </span></h1>
+				</div>
+			</div>	
+        </div>
+		<!----- ABOUT PAGE ----->
+		<div id="about">
+			<div class="container">
+				<div class="row">
+					<div class="about-col-1">
+						<img src="images/NoMassProd-2.jpg" alt="NoMassProd">
+					</div>
+					<div class="about-col-2">
+						<h1 class="sub-title">About Me</h1>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+						<div class="tab-titles">
+							<p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+							<p class="tab-links" onclick="opentab('experience')">Experience</p>
+							<p class="tab-links" onclick="opentab('education')">Education</p>
+						</div>
+						<div class="tab-contents active-tab" id="Skills">
+							<ul>
+								<li><span>Graphic Design</span><br>Adobe Photoshop<br>Adobe Illustrator<br>Adobe InDesign</li>
+								<li><span>Web Design</span><br>Visual Studio Code</li>
+								<li><span>Photography</span><br>Sony A7iii</li>
+							</ul>
+						</div>
+						<div class="tab-contents" id="experience">
+							<ul>
+								<li><span>2022 - current </span><br>Rogue</li>
+								<li><span>2020-2022</span><br>Greenbay Marketplace</li>
+							</ul>
+						</div>
+						<div class="tab-contents" id="education">
+							<ul>
+								<li><span>2022 - current</span><br>CUNY City Tech</li>
+								<li><span>2018-2020</span><br>Florida International University</li>
+								<li><span>2017</span><br>Somerset Academy Arts Conservatory</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+<!----- CONTACT FORM ----->
+<div id="contact">
+	<div class="container">
+		<div class="row">
+			<div class="contact-left">
+				<h1 class="sub-title">Contact Me</h1>
+				<p><i class="fa-solid fa-paper-plane"></i>gabrielcelik10@mail.citytech.edu</p>
+				<p><i class="fa-solid fa-phone-volume"></i>(678)999-8212</p>
+				<div class="social-icons">
+					<a href=""><i class="fa-brands fa-instagram"></i></a>
+					<a href=""><i class="fa-brands fa-twitter"></i></a>
+					<a href=""><i class="fa-brands fa-tiktok"></i></a>
+				</div>
+				
+			</div>
+			<div class="contact-right">
+					<form action="https://formsubmit.co/https://formsubmit.co/1f0d5c3608ac4daa7bb05ee4c37d653d" method="POST">
+						<input type="text" name="Name" placeholder="Your Name" required>
+						<input type="email" name="email" placeholder="Your Email" required>
+						<textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+						<button type="submit" class="btn btn2">Submit</button>
+					</form>
+			</div>
+		</div>
+	</div>
+	<div class="copyright">
+		<p>Copyroght © Gabriel</p>
+	</div>
+</div>
+
+
+<script>
+	var tablinks = document.getElementsByClassName("tab-links");
+	var tabcontents = document.getElementsByClassName("tab-contents"); 
+	
+	function opentab(tabname){
+		for(tablink of tablinks){
+			tablink.classList.remove("active-link");
+		} 
+		for(tabcontent of tabcontents){
+			tabcontent.classlist.remove("active-tab");
+		} 
+		event.currentTarget.classlist.add("active-link");
+		document.getElementById(tabname).classlist.add("active-tab");
+	}
+</script>
+
+        <!-- The stuff you can see on the web page goes in here -->
+</body>
+</html>
